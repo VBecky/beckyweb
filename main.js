@@ -59,6 +59,7 @@ const typed = new Typed('.multiple-text', {
  loop: true
 });
 
+emailjs.init("L3Ps1-ihRB72OQToc");
 
 const contactForm = document.querySelector("form");
 
@@ -66,8 +67,8 @@ contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   emailjs.sendForm(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
+    "service_gl5ibkm",
+    "template_4qq1m6t",
     this
   ).then(() => {
     alert("Message sent successfully!");

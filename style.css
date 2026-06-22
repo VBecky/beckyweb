@@ -518,3 +518,11 @@ span {
   margin-top: 2rem;
  }
 }
+
+
+.home-img img,
+.about-img img {
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+}

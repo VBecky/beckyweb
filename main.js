@@ -58,3 +58,22 @@ const typed = new Typed('.multiple-text', {
  backDelay: 1000,
  loop: true
 });
+
+
+const contactForm = document.querySelector("form");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "YOUR_SERVICE_ID",
+    "YOUR_TEMPLATE_ID",
+    this
+  ).then(() => {
+    alert("Message sent successfully!");
+    contactForm.reset();
+  }, (error) => {
+    alert("Failed to send message");
+    console.log(error);
+  });
+});
